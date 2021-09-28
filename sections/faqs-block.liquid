@@ -1,0 +1,41 @@
+
+{% assign layout = section.setting.block_layout_faq | plus: 0 %}
+
+<div>Ngo Duc Nhu 1</div><div>
+ fa;j'kds[]psknald;laskdnl
+{% schema %}
+  {
+    "name": "magento",
+	"class": "faqs-block",
+    "settings": [
+		{
+			"type": "header",
+			"content":"General Setting"
+		},
+		{
+          "type": "radio",
+          "id": "logo_aligment",
+          "label": "Logo alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "centered",
+              "label": "Centered"
+            }
+          ],
+          "default": "left"
+        }
+		
+     
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

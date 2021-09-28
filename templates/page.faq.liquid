@@ -1,0 +1,90 @@
+{% include 'breadcrumb' %}
+{% section 'faqs-block'%}
+<div class="grid">
+
+  <div class="grid-item large--two-thirds push--large--one-sixth">
+
+    <h1>{{ page.title }}</h1>
+	
+    <div class="rte">
+      {{ page.content }}
+      
+    </div>
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Body html</th>
+        <th>Handle</th>
+        <th>Created at</th>
+        <th>Image</th>
+        <th>Image</th>
+      </tr>
+    {% for product in collections.frontpage.products %}
+      <tr>
+        <td>{{ product.id }}</td>
+        <td>{{ product.title }}</td>
+        <td><img src="{{ product.images[0] | img_url: '' }}" alt="{{product.images[0].alt}}" /></td>
+        <td>{{ product.body_html}}</td>
+        <td>{{ product.tags}}</td>
+        <td>{{ product.created_at}}</td>
+        <td>{{ product.product_type}}</td>
+        <td>{{ product.vendor}}</td>
+      </tr>
+    {% endfor %}
+    </table>
+    
+    
+    {% for variant in product.variants %}
+        {% endfor %}
+    
+      {% if product.options.size > 1 %}
+     <div class="select" {% if product.variants.size == 1 or section.settings.product_variants == 'swatches' %}style="display: none;"{% endif %}>
+       <select id="product-select-{{ product.id }}" name='id'>
+         {% for variant in product.variants %}
+           <option value="{{ variant.id }}" {% if variant == current_variant %}selected="selected"{% endif %}>
+             {{ variant.title }} - {{ variant.price | money }}
+           </option>
+         {% endfor %}
+       </select>
+     </div>
+      {% if section.settings.product_variants == 'swatches' %}
+        {% for option in product.options_with_values %}
+          {% include "swatch" %}
+        {% endfor %}
+      {% endif %}
+    {% elsif product.options.size == 1 and product.variants.size > 1 %}
+    <div class="select" {% if product.variants.size == 1 or section.settings.product_variants == 'swatches' %}style="display: none;"{% endif %}>
+       <label>{{ product.options[0] }}</label>
+       <select id="product-select-{{ product.id }}" name='id'>
+         {% for variant in product.variants %}
+           <option data-sku="{{ variant.sku }}" value="{{ variant.id }}" {% if variant == current_variant %}selected="selected"{% endif %}>
+             {{ variant.title }} - {{ variant.price | money }}
+           </option>
+         {% endfor %}
+       </select>
+     </div>
+     {% if section.settings.product_variants == 'swatches' %}
+       {% for option in product.options_with_values %}
+         {% include "swatch" %}
+       {% endfor %}
+     {% endif %}
+    {% else %}
+     <div class="what-is-it">
+       {% if product.options.first != 'Title' %}
+         <label>{{ product.options.first }}:</label>
+         {% for variant in product.variants %}
+           <span class="it-is">{{ variant.option1 | escape }}</span>
+         {% endfor %}
+       {% endif %}
+     </div>
+    {% endif %}
+	
+  </div>
+
+</div>
+
+<script>
+	
+</script>
