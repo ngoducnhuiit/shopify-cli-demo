@@ -30,7 +30,7 @@
         <td>{{ product.tags}}</td>
         <td>{{ product.created_at}}</td>
         <td>{{ product.product_type}}</td>
-        <td>{{ product.variant}}</td>
+        <td>{{ product.variant.inventory_quantity }}</td>
       </tr>
     {% endfor %}
     </table>
