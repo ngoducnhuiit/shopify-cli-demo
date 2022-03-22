@@ -30,13 +30,7 @@
         <td>{{ product.tags}}</td>
         <td>{{ product.created_at}}</td>
         <td>{{ product.product_type}}</td>
-        {% for variant in product %}
-        <div class="product-variant"
-             data-variant-id="{{ variant.id }}"
-             data-variant-inventory-qty="{{ variant.inventory_quantity }}">
-            <!-- snip variant HTML -->
-        </div>
-        {% endfor %}
+        <td>{{ product.variant | json }}</td>
       </tr>
     {% endfor %}
     </table>
