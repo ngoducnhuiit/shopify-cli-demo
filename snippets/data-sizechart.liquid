@@ -1,0 +1,17 @@
+<script src="{{'data-sizechart.js' | asset_url }}" defer="defer"></script> 
+<script src="{{ 'data-sizechart-config.js' | asset_url }}" defer="defer"></script> 
+<script>
+const SIZECHART_MAGE = {};
+         SIZECHART_MAGE.product = {{product|json}};
+          console.log(SIZECHART_MAGE.product);
+         SIZECHART_MAGE.template = "{{ template }}";
+         SIZECHART_MAGE.collections = [];
+            console.log(SIZECHART_MAGE.template)
+         SIZECHART_MAGE.collections.push("{{collection.id}}")
+                                    console.log( SIZECHART_MAGE.collections.push("{{collection.id}}"));
+                                 
+          {% for collection in product.collections %}
+         SIZECHART_MAGE.collections.push("{{ collection.id }}");
+          {% endfor %}
+                                         
+</script>
