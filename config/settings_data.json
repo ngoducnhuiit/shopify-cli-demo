@@ -194,6 +194,18 @@
           "blog_show_excerpt": true,
           "show_view_all": false
         }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "grid": "4",
+          "rows": "6",
+          "collection_sidebar_filters": "tags",
+          "product_show_compare_at_price": true,
+          "product_show_saved_amount": true,
+          "product_reviews_enable": false,
+          "enable_sidebar": true
+        }
       }
     },
     "content_for_index": [
