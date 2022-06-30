@@ -77,6 +77,16 @@
     {% endfor %}
   </div>
 {% endif %}
+<div id="Huratips-Loop" >
+      {% for product in collection.products %}
+        {% include 'product-grid-item' %}
+      {% endfor %}
+</div>
+<div id="Huratips-Pagination">
+    {% if paginate.next %}
+    <a href="{{ paginate.next.url }}">Loading More</a>
+    {% endif %}  
+</div>
 
 
 
