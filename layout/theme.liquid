@@ -34,7 +34,6 @@
   {{ 'sheetname.scss.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'nhu.js' | asset_url }}" defer="defer"></script>
   {% include 'header-style' %}
-  <script id="move-body" src="{{ 'infinite-scroll.js' | asset_url }}" async="async"></script>
   <script>
 
     var moneyFormat = '{{ shop.money_format }}';
