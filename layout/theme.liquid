@@ -107,10 +107,9 @@
   <script src="{{ 'infiniti-scroll.js' | asset_url }}" defer="defer" id="infiniti-scroll"></script>
 {% if template contains 'collection' %}{{ 'https://cdn.shopify.com/s/files/1/0382/4185/files/ajaxinate.js?937' | script_tag }}{% endif %}
     <script>
-      
        $(document).ready(function() {
           var infifuncion  = $('#infiniti-scroll');
-          $script([infifuncion], function(){
+          $(document).ready([infifuncion], function(){
             var ias = jQuery.ias();
             jQuery.ias({
         	    container 	: ".grid",
