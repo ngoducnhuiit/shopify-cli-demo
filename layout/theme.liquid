@@ -104,10 +104,14 @@
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></ script>
-  <script src="{{ 'infiniti-scroll.js' | asset_url }}" defer="defer">var options =  {
-            container 	: ".main",
-            item      	: ".product-item",
-            pagination  : ".pages-items",
+  <script src="{{ 'infiniti-scroll.js' | asset_url }}" defer="defer"></script>
+{% if template contains 'collection' %}{{ 'https://cdn.shopify.com/s/files/1/0382/4185/files/ajaxinate.js?937' | script_tag }}{% endif %}
+    <script>
+      
+        var options = {
+            container 	: ".grid",
+            item      	: ".grid-item ",
+            pagination  : ".pagination-custom",
             next   		: ".next",
             delay  		: "600",
             src 		: "",
@@ -124,12 +128,12 @@
         var options = this.options;
     	$(document).ready(function ($) {
             $('body').addClass('infinitescroll-pro');
-            if(!jQuery().ias){
+            if(!$.ias){
             	console.warn('Plugin "jQuery.ias" does not exist!');
             	return;
             }
-        	jQuery.ias('destroy');
-            window.ias = jQuery.ias({
+        	$.ias('destroy');
+            window.ias = $.ias({
                 container : options.container,
                 item 	  : options.item,
                 pagination: options.pagination,
@@ -154,9 +158,10 @@
             window.ias.on('rendered', function(items){
                 $('body').trigger('contentUpdated');
             });
-        });</script>
-{% if template contains 'collection' %}{{ 'https://cdn.shopify.com/s/files/1/0382/4185/files/ajaxinate.js?937' | script_tag }}{% endif %}
-   
+        });
+
+
+    </script>
 </head>
 
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ request.page_type | handle }}">
