@@ -34,7 +34,6 @@
   {{ 'sheetname.scss.css' | asset_url | stylesheet_tag }}
 
   {% include 'header-style' %}
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   
   <script>
 
@@ -104,6 +103,7 @@
   <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></ script>
+  {{ 'infiniti-scroll.js' | asset_url | script_tag }}
 {% if template contains 'collection' %}{{ 'https://cdn.shopify.com/s/files/1/0382/4185/files/ajaxinate.js?937' | script_tag }}{% endif %}
 
 </head>
