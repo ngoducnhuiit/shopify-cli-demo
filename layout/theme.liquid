@@ -128,12 +128,12 @@
         var options = this.options;
     	$(document).ready(function ($) {
             $('body').addClass('infinitescroll-pro');
-            if(!jQuery().ias){
+            if(!$().ias){
             	console.warn('Plugin "jQuery.ias" does not exist!');
             	return;
             }
-        	jQuery.ias('destroy');
-            window.ias = jQuery.ias({
+        	$.ias('destroy');
+            window.ias = $.ias({
                 container : options.container,
                 item 	  : options.item,
                 pagination: options.pagination,
