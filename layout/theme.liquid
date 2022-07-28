@@ -36,6 +36,11 @@
   {% include 'header-style' %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
+    $(document).ready(function(){
+        $('body').addClass('nhu');
+    });
+  </script>
+  <script>
 
     var moneyFormat = '{{ shop.money_format }}';
 
