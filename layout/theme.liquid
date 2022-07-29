@@ -108,7 +108,9 @@
   <script src="{{ 'infiniti-scroll.js' | asset_url }}" defer="defer" id="infiniti-scroll"></script>
 {% if template contains 'collection' %}{{ 'https://cdn.shopify.com/s/files/1/0382/4185/files/ajaxinate.js?937' | script_tag }}{% endif %}
     <script>
-      require(['{{ 'infiniti-scroll.js' | asset_url }}'])
+      require(["https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js","{{ 'infiniti-scroll.js' | asset_url }}']", function($, infinitiScroll){
+        
+      });
        $(document).ready(function() {
           var infifuncion  = $('#infiniti-scroll');
           $(document).ready([infifuncion.attr('src')], function(){
