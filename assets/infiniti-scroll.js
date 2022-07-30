@@ -293,7 +293,7 @@ IASCallbacks.prototype = {
             }
 
             // compensate for iPhone
-            if (navigator.platform.indexof("iPhone") != -1 || navigator.platform.indexof("iPod") != -1) {
+            if (navigator.platform.indexOf("iPhone") != -1 || navigator.platform.indexOf("iPod") != -1) {
                 containerHeight += 80;
             }
 
