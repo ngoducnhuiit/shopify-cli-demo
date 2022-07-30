@@ -107,8 +107,8 @@
   <script src="{{ 'infiniti-scroll.js' | asset_url }}" defer="defer" id="infiniti-scroll"></script>
   
     <script type="text/javascript">
-
-          $(window).on('load', function(){
+    
+		$(document).ready(function(){
 			var options = {
 	            container 	: ".grid-uniform",
 	            item      	: ".grid-item",
@@ -153,7 +153,8 @@
                 htmlPrev: options.htmlPrev,
                 offset  : options.offset,
             }));
-        });
+       
+		});
 	</script>
 </head>
 
