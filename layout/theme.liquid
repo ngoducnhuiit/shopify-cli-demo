@@ -97,13 +97,14 @@
     {{ 'customer_area.js'  | shopify_asset_url | script_tag }}
   {% endif %}
 
-<!--   {{ 'jquery-2.2.3.min.js' | asset_url | script_tag }} -->
+
 
   <script src="{{ 'lazysizes.min.js' | asset_url }}" async="async"></script>
   <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'requireJs.js' | asset_url }}" defer="defer"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"/>
+{{ 'jquery-2.2.3.min.js' | asset_url | script_tag }}
   <script src="{{ 'infiniti-scroll.js' | asset_url }}" defer="defer" id="infiniti-scroll"></script>
   
     <script type="text/javascript">
