@@ -199,7 +199,7 @@
         "type": "collection-template",
         "settings": {
           "grid": "4",
-          "rows": "6",
+          "rows": "3",
           "collection_sidebar_filters": "tags",
           "product_show_compare_at_price": true,
           "product_show_saved_amount": true,
