@@ -129,20 +129,14 @@
             	console.warn('Plugin "jQuery.ias" does not exist!');
             	return;
             }
-        	// jQuery.ias({
-         //        item 	  : options.item,
-         //        pagination: options.pagination,
-         //        next 	  : options.next,
-         //        delay     : options.delay
-         //    });
-          
-         //    window.ias = jQuery.ias({
-         //        container : options.container,
-         //        item 	  : options.item,
-         //        pagination: options.pagination,
-         //        next 	  : options.next,
-         //        delay     : options.delay
-         //    });
+       
+            window.ias = jQuery.ias({
+                container : options.container,
+                item 	  : options.item,
+                pagination: options.pagination,
+                next 	  : options.next,
+                delay     : options.delay
+            });
          //    window.ias.extension(new IASSpinnerExtension({
          //        src : options.src,
          //        html: options.htmlLoading
@@ -158,10 +152,7 @@
          //        htmlPrev: options.htmlPrev,
          //        offset  : options.offset,
          //    }));
-         //    window.ias.on('rendered', function(items){
-         //        $('body').trigger('contentUpdated');
-         //        $( "form[data-role='tocart-form']" ).catalogAddToCart();
-         //    });
+       
 		});
 	</script>
 </head>
