@@ -129,28 +129,28 @@
             	return;
             }
        
-            window.ias = jQuery.ias({
-                container : options.container,
-                item 	  : options.item,
-                pagination: options.pagination,
-                next 	  : options.next,
-                delay     : options.delay
-            });
-            window.ias.extension(new IASSpinnerExtension({
-                src : options.src,
-                html: options.htmlLoading
-            }));
-            window.ias.extension(new IASNoneLeftExtension({
-                text: options.textLoadEnd,
-                html: options.htmlLoadEnd,
-            }));
-          	window.ias.extension(new IASTriggerExtension({
-                text    : options.textLoadMore,
-                html    : options.htmlLoadMore,
-                textPrev: options.textPrev,
-                htmlPrev: options.htmlPrev,
-                offset  : options.offset,
-            }));
+           //  window.ias = jQuery.ias({
+           //      container : options.container,
+           //      item 	  : options.item,
+           //      pagination: options.pagination,
+           //      next 	  : options.next,
+           //      delay     : options.delay
+           //  });
+           //  window.ias.extension(new IASSpinnerExtension({
+           //      src : options.src,
+           //      html: options.htmlLoading
+           //  }));
+           //  window.ias.extension(new IASNoneLeftExtension({
+           //      text: options.textLoadEnd,
+           //      html: options.htmlLoadEnd,
+           //  }));
+          	// window.ias.extension(new IASTriggerExtension({
+           //      text    : options.textLoadMore,
+           //      html    : options.htmlLoadMore,
+           //      textPrev: options.textPrev,
+           //      htmlPrev: options.htmlPrev,
+           //      offset  : options.offset,
+           //  }));
        
 		});
 	</script>
