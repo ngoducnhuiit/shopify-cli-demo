@@ -7,13 +7,9 @@ var description = sizeChartFilterByProductId[0].description;
 var newdiv2 = document.createElement( "div" );
   newdiv2.classList.add("sizechart");
   newdiv2.innerHTML = description;
-  if( description) {
-   
+  if( description) {  
   var app = document.querySelector(sizeChartFilterByProductId[0].placement);
   app.append(newdiv2);
-  console.log("succeed");
-}else{
-  console.log('false');
 }
 }else{
   console.log('magepow size chart');
