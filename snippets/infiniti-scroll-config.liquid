@@ -1,4 +1,4 @@
-<script class="json-config-infinite" type="application/json" id="magepow_config_scroll_laravel_app">{"enabled": "1","itemLoad": ".grid-item","delay": "1000","container": ".grid-uniform","pagination": ".pagination-custom","nextPagination": ".next","loadingText": "Loading","doneText": "You've reached the end of the item.","image": "62e8e590c95a5_4b_1.gif","loadMoreButtonText": "Load More ..."}</script>{{ 'infinite-scroll.js' | shopify_asset_url | script_tag}}
+<script class="json-config-infinite" type="application/json" id="magepow_config_scroll_laravel_app">{"enabled": "1","itemLoad": ".grid-item","delay": "1000","container": ".grid-uniform","pagination": ".pagination-custom","nextPagination": ".next","loadingText": "Loading","doneText": "You've reached the end of the item.","image": "62e8e590c95a5_4b_1.gif","loadMoreButtonText": "Load More ..."}</script>{{ 'infinite-scroll.js' | asset_url | script_tag}}
 <script class="config-infinite" type="text/javascript" defer="defer">
     $(document).ready(function(){
         var laravelConfig = $('#magepow_config_scroll_laravel_app');
