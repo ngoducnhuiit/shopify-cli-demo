@@ -1,4 +1,4 @@
-<script class="json-config-infinite" type="application/json" id="magepow_config_scroll_laravel_app">{"enabled": "0","itemLoad": ".grid-item","delay": "15","container": ".grid-uniform","pagination": ".pagination-custom","nextPagination": ".next","loadingText": "Loading","doneText": "You've reached the end of the item.","image": "62e8e536e1157_loader-1.gif","loadMoreButtonText": "Load More ...",}</script>if(typeof(IASCallbacks) == "undefined"){
+if(typeof(IASCallbacks) == "undefined"){
     /**
      * IASCallbacks
      * http://infiniteajaxscroll.com
