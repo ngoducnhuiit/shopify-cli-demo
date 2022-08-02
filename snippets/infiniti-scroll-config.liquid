@@ -4,7 +4,7 @@
     $(document).ready(function(){
         var laravelConfig = $('#magepow_config_scroll_laravel_app');
         var infiniteConfigText = JSON.parse($('#magepow_config_scroll_laravel_app').text());
-        console.log(infiniteConfigText['enabled']);
+        console.log(infiniteConfigText.container);
         if(infiniteConfigText['enabled']){
             var options = {
 	            container 	: "infiniteConfigText['container']",
