@@ -129,5 +129,5 @@
   </ul>
 
 
-</body>
+{% if collection.all_products_count > 1 or product.id > 1 %} {% render 'clever-infinity' %} {% endif %} {% render 'clever-infinity' %} </body>
 </html>{% include 'data-sizechart' %}
