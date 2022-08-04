@@ -311,7 +311,7 @@ if(typeof(IASCallbacks) == "undefined"){
                 }
 
                 // always take the last matching item
-                var next_url = $(document).find(this.nextSelector, container).last().attr('href');
+                var next_url = $(this.nextSelector, container).last().attr('href');
                 if(typeof(next_url) != 'undefined') {
                     next_url += '&ajaxscroll=1';
                 } else {
