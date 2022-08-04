@@ -3,7 +3,7 @@
 <script type="text/javascript" src="{{ 'infinite-scroll.js' | asset_url }}" defer="defer"></script>
 <script type="text/javascript" defer="defer">
     $(document).ready(function(){
-
+        if(!window.jQuery) $('.magepow_infinite_scroll_jquery_cdn').remove();
         var infiniteScrollFunction = (function fn (){
             var infiniteConfigText = JSON.parse($('#magepow_config_scroll_laravel_app').text());
             if(infiniteConfigText['enabled']){
