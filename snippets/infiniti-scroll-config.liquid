@@ -1,5 +1,5 @@
-{% if request.page_type == 'collection' %}<script class="json-config-infinite" type="application/json" id="magepow_config_scroll_laravel_app">{"enabled": 1,"itemLoad": ".grid-item","delay": "1000","container": ".grid-uniform","pagination": ".pagination-custom","nextPagination": ".next","loadingText": "Loading ...","doneText": "You've reached the end of the item.","image": "{{ "62e9e76170910_4b_1.gif" | asset_url }}","loadMoreButtonText": "Load More ..."}</script>{% endif %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+{% if request.page_type == 'collection' %}<script class="json-config-infinite" type="application/json" id="magepow_config_scroll_laravel_app">{"enabled": 1,"itemLoad": ".grid-item","delay": "1000","container": ".grid-uniform","pagination": ".pagination-custom","nextPagination": ".next","loadingText": "Loading ...","doneText": "You've reached the end of the item.","image": "{{ "62e9e76170910_4b_1.gif" | asset_url }}","loadMoreButtonText": "Load More ..."}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" type="text/javascript" class="magepow_infinite_scroll_jquery_cdn"></script>
 <script type="text/javascript" src="{{ 'infinite-scroll.js' | asset_url }}" defer="defer"></script>
 <script type="text/javascript" defer="defer">
     $(document).ready(function(){
@@ -73,3 +73,4 @@
     });
 </script>
 
+{% endif %}
