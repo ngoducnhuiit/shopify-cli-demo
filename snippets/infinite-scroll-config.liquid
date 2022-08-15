@@ -1,4 +1,4 @@
-{% if request.page_type == 'collection' %}<script class="json-config-infinite" type="application/json" id="magepow_config_scroll_laravel_app">{"enabled": 1,"itemLoad": ".grid-item","delay": "1000","container": ".grid-uniform","pagination": ".pagination-custom","nextPagination": ".next","loadingText": "Loading","doneText": "You've reached the end of the item.","image": "{{ "62fa3d0d00136_loader-swatch.gif" | asset_url }}","loadMoreButtonText": "Load More ..."}</script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" type="text/javascript" class="magepow_infinite_scroll_jquery_cdn"></script>
+{% if request.page_type == 'collection' %}<script class="json-config-infinite" type="application/json" id="magepow_config_scroll_laravel_app">{"enabled": 1,"itemLoad": ".grid-item","delay": "1000","container": ".grid-uniform","pagination": ".pagination-custom","nextPagination": ".next","loadingText": "Loading","doneText": "You've reached the end of the item.","image": "{{ "62fa3d0d00136_loader-swatch.gif" | asset_url }}","loadMoreButtonText": "Load More ...""offset": "2"}</script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" type="text/javascript" class="magepow_infinite_scroll_jquery_cdn"></script>
 <script type="text/javascript" src="{{ 'infinite-scroll.js' | asset_url }}" defer="defer"></script>
 <script type="text/javascript" defer="defer">
     $(document).ready(function(){
@@ -20,7 +20,7 @@
                     textLoadMore: infiniteConfigText["loadMoreButtonText"],
                     textPrev 	: "Load more items",
                     htmlPrev 	: "<div class=\"ias-trigger ias-trigger-prev\"><button class=\"load-more\">Load more items</button></div>",
-                    offset 		: 3
+                    offset 		: infiniteConfigText["offset"]
                 };
                 $('body').addClass('infinitescroll-pro');
                 if(!jQuery().ias){
