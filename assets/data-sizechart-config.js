@@ -1,16 +1,1 @@
-if(SIZECHART_MAGE.template == "product"){
-var product_id_current_page = SIZECHART_MAGE.product.id;
-var sizeChartFilterByProductId = sizechart.filter(
-  item => (item.products_id.split(",").includes(product_id_current_page.toString())&&(item.enable == 0)))
-  .sort((a, b) =>  (a.priority < b.priority ? 1 : -1));
-var description = sizeChartFilterByProductId[0].description;
-var newdiv2 = document.createElement( "div" );
-  newdiv2.classList.add("sizechart");
-  newdiv2.innerHTML = description;
-  if( description) {  
-  var app = document.querySelector(sizeChartFilterByProductId[0].placement);
-  app.append(newdiv2);
-}
-}else{
-  console.log('magepow size chart');
-}
+if("product"==SIZECHART_MAGE.template){var g=SIZECHART_MAGE.product.id,a=sizechart.filter(a=>a.products_id.split(",").includes(g.toString())&&1==a.enable&&1==a.display_on).sort((a,b)=>a.priority<b.priority?1:-1).shift(),b=sizechart.filter(a=>1==a.enable&&0==a.display_on).sort((a,b)=>a.priority<b.priority?1:-1).shift(),f=sizechart.filter(a=>0==a.enable);if(void 0!==b){var c=b.detail,d=b.name;document.getElementById("sizechart").text=d;var e=document.getElementById("myForm");e.innerHTML+=c}else if(void 0!==a){var c=a.detail,d=a.name;document.getElementById("sizechart").text=d;var e=document.getElementById("myForm");e.innerHTML+=c}else void 0!==f?document.getElementsByClassName("open-button")[0].style.display="none":console.log("magepow size chart")}
